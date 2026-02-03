@@ -2,7 +2,7 @@
 
 # Hey, I'm Camilo 👋
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&duration=3000&pause=1000&color=3B82F6&center=true&vCenter=true&multiline=true&repeat=true&width=600&height=100&lines=Full-Stack+Developer;Business+Analytics+Master;Systems+Architect;Building+AI-Powered+Tools)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&duration=3000&pause=1000&color=3B82F6&center=true&vCenter=true&width=500&height=40&lines=Full-Stack+Developer;Business+Analytics+Master;Systems+Architect;Building+AI-Powered+Tools)](https://git.io/typing-svg)
 
 **🇨🇴 Colombia → 🗽 New York City**
 
