@@ -17,17 +17,12 @@
 
 ## 🧠 About Me
 
-```javascript
-const camilo = {
-    location: "New York City",
-    origin: "Colombia",
-    role: "Full-Stack Developer & Business Analytics Master",
-    focus: ["AI/ML Systems", "Data Engineering", "Product Development"],
-    currentlyBuilding: "AI-powered productivity & health analytics tools",
-    philosophy: "If it can be systematized, it should be.",
-    funFact: "Running every street in Astoria, Queens"
-};
-```
+> Building AI-powered productivity & health analytics tools. If it can be systematized, it should be.
+
+- 🗽 **Location:** New York City (from Colombia 🇨🇴)
+- 💼 **Role:** Full-Stack Developer & Business Analytics Master
+- 🎯 **Focus:** AI/ML Systems, Data Engineering, Product Development
+- 🏃 **Fun fact:** Running every street in Astoria, Queens
 
 ---
 
