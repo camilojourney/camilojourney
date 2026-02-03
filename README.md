@@ -17,15 +17,15 @@
 
 ## 🧠 About Me
 
-```js
+```javascript
 const camilo = {
-    location: "New York City 🗽",
-    origin: "Colombia 🇨🇴",
+    location: "New York City",
+    origin: "Colombia",
     role: "Full-Stack Developer & Business Analytics Master",
     focus: ["AI/ML Systems", "Data Engineering", "Product Development"],
     currentlyBuilding: "AI-powered productivity & health analytics tools",
     philosophy: "If it can be systematized, it should be.",
-    funFact: "Running every street in Astoria, Queens 🏃‍♂️"
+    funFact: "Running every street in Astoria, Queens"
 };
 ```
 
