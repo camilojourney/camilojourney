@@ -17,7 +17,7 @@
 
 ## 🧠 About Me
 
-```typescript
+```js
 const camilo = {
     location: "New York City 🗽",
     origin: "Colombia 🇨🇴",
