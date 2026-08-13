@@ -1,71 +1,36 @@
 # Camilo Martinez
 
-> Full-stack developer and business analytics master's student building AI-powered
-> productivity and health analytics tools.
+New York City. MS in Business Analytics, Baruch College (2026). I implement, evaluate, and operate applied AI systems: retrieval, agent workflows, publishing APIs, speech scoring, and the review loops that keep them inspectable.
+
+[Portfolio](https://camilomartinez.co) · [LinkedIn](https://linkedin.com/in/camilomartinez-ai) · [Email](mailto:hello@camilomartinez.co)
+
+## Activity
+
+[![GitHub contribution activity](https://github-readme-activity-graph.vercel.app/graph?username=camilojourney&theme=github&hide_border=true&area=true)](https://github.com/camilojourney)
+
+Contribution graph for this account's recent public activity. The native heatmap is on the [GitHub profile](https://github.com/camilojourney).
 
 ## About
 
-- Based in New York City, originally from Colombia.
-- Focused on AI/ML systems, data engineering, and product development.
-- Building practical tools that turn repeatable work into reliable systems.
-- Running every street in Astoria, Queens.
+- Based in New York City; originally from Colombia. English and Spanish.
+- Recruiter lanes: AI implementation and deployment, applied AI, AI data, product analytics, evaluation and human-data, AI product operations.
+- Authorized to work in the United States; no sponsorship required.
+- Day-to-day stack: Python, FastAPI, SQL, TypeScript / React.
 
 ## Highlights
 
-### Applications
+### Public systems
 
-- **Fitness Dashboard** - Health analytics combining WHOOP and Strava data
-  pipelines. Technology: Next.js, FastAPI.
-- **Accountability Partner** - Public commitment tracking for daily workout
-  challenges. Technology: React.
-- **Astoria Conquest** - Geospatial routing for running every street in Astoria.
-  Technology: Graph theory, mapping.
-- **Social Media Pipeline** - LLM-powered content generation and automation.
-  Technology: LLMs, automation.
-- **AI Advisor Board** - Multi-agent advisory system for strategy and risk
-  analysis. Technology: Multi-agent systems.
-- **Self-Improving Chatbot** - RAG-powered agent with an expanding knowledge
-  base. Technology: RAG, NLP.
-- **Focus Time** - Menu bar timer for focused work. Technology: Tauri, Rust.
+- **[Holusight](https://holusight.com/)** — Hybrid BM25 + vector search with reciprocal rank fusion for documents and code. Local-first indexing; answers cite file and line range. [Source](https://github.com/camilojourney/holusight).
+- **[Holus Observatory](https://holus.camilomartinez.co)** — Read-only operations dashboard for a multi-agent content system: agent health, evaluation records, and publishing workflow status. [Source](https://github.com/camilojourney/holus).
+- **[Holus Social Media Automation API](https://api.camilomartinez.co/)** — Live publishing API: publish, schedule, and manage content across X, Threads, Instagram, Facebook, and LinkedIn.
+- **[Pronunciation error detection](https://github.com/camilojourney/pronunciation-error-detection)** — Public NLP research on pronunciation error analysis (Python / Quarto).
+- **[Fitness dashboard](https://camilomartinez.co/apps/fitness-dashboard)** — WHOOP and Strava analytics on the portfolio.
 
-### Research
+### Live products (private source)
 
-- **NLP & Pronunciation Detection** - Machine-learning analysis of
-  pronunciation errors. Technology: Python, NLP.
-- **HRV Research** - Heart-rate variability analysis for recovery optimization.
-  Technology: ML, health data.
-- **NLP Experiments** - Natural-language processing experiments and notebooks.
-  Technology: Jupyter, Python.
+These are live sites. Their GitHub repositories are private, so they are not linked here.
 
-### In development
-
-- **Invoz.ai** - Privacy-first, on-device speech coaching with real-time grammar
-  correction. Technology: Rust, speech AI.
-- **Pilaster** - Architecture and systems project. Technology: TypeScript.
-- **Smart Calendar** - Intelligent scheduling system. Technology: Python.
-- **CEO Agent** - AI-powered executive decision support. Technology: Python, AI.
-- **Elucy** - AI-assisted spaced repetition for knowledge workspaces.
-  Technology: TypeScript.
-
-### Developer tools
-
-- **Py Markdown to Notion** - Converts Markdown files to Notion pages.
-  Technology: Python.
-- **Recovery Mac System** - macOS system recovery toolkit. Technology: Python,
-  shell.
-- **Cloud Deployment** - Infrastructure templates and automation. Technology:
-  Python.
-
-## Links
-
-- [About](#about)
-- [Highlights](#highlights)
-- [Applications](#applications)
-- [Research](#research)
-- [In development](#in-development)
-- [Developer tools](#developer-tools)
-- [README source](./README.md)
-
-## Philosophy
-
-> If it can be systematized, it should be.
+- **[Invoz](https://invoz.io)** — Cloud-backed, cross-platform English communication coach. Voice in; scored acoustic and linguistic feedback. Not an on-device Rust product.
+- **[Pilaster](https://pilaster.ai)** — Recipe memory for AI generation: prompts, models, seeds, and outcomes attached to a character or style so a working result can be reused.
+- **[Job Tracker](https://job-tracker.camilomartinez.co)** — Public demo that matches a background to a job posting and produces a tailored one-page CV.
