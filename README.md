@@ -8,7 +8,7 @@ New York City. MS in Business Analytics, Baruch College (2026). I implement, eva
 
 [![GitHub contribution activity](https://github-readme-activity-graph.vercel.app/graph?username=camilojourney&theme=github&hide_border=true&area=true)](https://github.com/camilojourney)
 
-Contribution graph for this account (public and private activity). The native heatmap is on the [GitHub profile](https://github.com/camilojourney).
+Contribution graph for this account's recent public activity. The native heatmap is on the [GitHub profile](https://github.com/camilojourney).
 
 ## About
 
