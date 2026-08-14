@@ -34,3 +34,4 @@ These are live sites. Their GitHub repositories are private, so they are not lin
 - **[Invoz](https://invoz.io)** — Cloud-backed, cross-platform English communication coach. Voice in; scored acoustic and linguistic feedback. Not an on-device Rust product.
 - **[Pilaster](https://pilaster.ai)** — Recipe memory for AI generation: prompts, models, seeds, and outcomes attached to a character or style so a working result can be reused.
 - **[Job Tracker](https://job-tracker.camilomartinez.co)** — Public demo that matches a background to a job posting and produces a tailored one-page CV.
+- **[EditAI (Genpeli)](https://editai.ai/)** - AI-assisted video editing pipeline for short-form content, including cuts, captions, sound effects, review, and delivery.
