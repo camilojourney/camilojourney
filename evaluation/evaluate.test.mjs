@@ -121,6 +121,16 @@ test("missing relative link target produces a definitive failure", async () => {
   assert.ok(check(scorecard, "relative-links").evidence_codes.includes("relative-target-missing"));
 });
 
+test("dynamic activity graph endpoint is explicitly excluded from availability probing", async () => {
+  const suite = await loadSuite(repoRoot);
+  const activityGraph = "https://github-readme-activity-graph.vercel.app/graph?username=camilojourney";
+
+  assert.equal(
+    suite.linkPolicy.ignorePatterns.some(({ pattern }) => new RegExp(pattern, "u").test(activityGraph)),
+    true,
+  );
+});
+
 test("raw HTML links retain the existing link-validation semantics", async () => {
   const scorecard = await evaluateFixture("# Profile\n\n<a href=\"./missing-from-html.md\">Missing</a>\n");
 

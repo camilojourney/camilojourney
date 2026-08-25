@@ -30,6 +30,9 @@
       },
       {
         "pattern": "^https://github\\.com/camilojourney/(invoz|pilaster|smart-calendar|elucy|recovery-mac-system|cloud-deployment)/?$"
+      },
+      {
+        "pattern": "^https://github-readme-activity-graph\\.vercel\\.app/graph\\?"
       }
     ],
     "retryOn429": true,
