@@ -1,0 +1,21 @@
+{
+  "name": "camilojourney-readme-evaluation",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "22.23.2"
+  },
+  "scripts": {
+    "evaluate": "node evaluation/evaluate.mjs",
+    "test": "node --test evaluation/evaluate.test.mjs"
+  },
+  "dependencies": {
+    "markdown-link-check": "3.15.0",
+    "markdown-link-extractor": "4.0.4",
+    "marked": "18.0.9"
+  },
+  "devDependencies": {
+    "ajv": "8.20.0"
+  }
+}

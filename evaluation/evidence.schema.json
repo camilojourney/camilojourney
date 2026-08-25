@@ -1,0 +1,277 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/camilojourney/camilojourney/evaluation/evidence.schema.json",
+  "title": "README evaluation evidence",
+  "oneOf": [
+    {
+      "$ref": "#/$defs/traceEvent"
+    },
+    {
+      "$ref": "#/$defs/scorecard"
+    },
+    {
+      "$ref": "#/$defs/comparison"
+    }
+  ],
+  "$defs": {
+    "outcome": {
+      "enum": [
+        "pass",
+        "fail",
+        "unknown"
+      ]
+    },
+    "suiteIdentity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "suite_id",
+        "suite_digest"
+      ],
+      "properties": {
+        "suite_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "suite_digest": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        }
+      }
+    },
+    "subject": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "role",
+        "kind",
+        "source",
+        "content_digest"
+      ],
+      "properties": {
+        "role": {
+          "enum": [
+            "baseline",
+            "candidate"
+          ]
+        },
+        "kind": {
+          "enum": [
+            "git",
+            "file"
+          ]
+        },
+        "source": {
+          "type": "string",
+          "minLength": 1
+        },
+        "commit": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
+        },
+        "content_digest": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        }
+      }
+    },
+    "check": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "check_id",
+        "required",
+        "outcome",
+        "evidence_codes"
+      ],
+      "properties": {
+        "check_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "required": {
+          "type": "boolean"
+        },
+        "outcome": {
+          "$ref": "#/$defs/outcome"
+        },
+        "evidence_codes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        }
+      }
+    },
+    "counts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "pass",
+        "fail",
+        "unknown"
+      ],
+      "properties": {
+        "pass": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "fail": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "unknown": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "traceEvent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema_version",
+        "suite",
+        "subject",
+        "check_id",
+        "outcome",
+        "evidence_codes"
+      ],
+      "properties": {
+        "schema_version": {
+          "const": "readme-evaluation-trace.v1"
+        },
+        "suite": {
+          "$ref": "#/$defs/suiteIdentity"
+        },
+        "subject": {
+          "$ref": "#/$defs/subject"
+        },
+        "check_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "outcome": {
+          "$ref": "#/$defs/outcome"
+        },
+        "evidence_codes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        }
+      }
+    },
+    "scorecard": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema_version",
+        "suite",
+        "subject",
+        "checks",
+        "counts",
+        "outcome"
+      ],
+      "properties": {
+        "schema_version": {
+          "const": "readme-evaluation-scorecard.v1"
+        },
+        "suite": {
+          "$ref": "#/$defs/suiteIdentity"
+        },
+        "subject": {
+          "$ref": "#/$defs/subject"
+        },
+        "checks": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/check"
+          }
+        },
+        "counts": {
+          "$ref": "#/$defs/counts"
+        },
+        "outcome": {
+          "$ref": "#/$defs/outcome"
+        }
+      }
+    },
+    "transition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "check_id",
+        "required",
+        "baseline_outcome",
+        "candidate_outcome",
+        "classification"
+      ],
+      "properties": {
+        "check_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "required": {
+          "type": "boolean"
+        },
+        "baseline_outcome": {
+          "$ref": "#/$defs/outcome"
+        },
+        "candidate_outcome": {
+          "$ref": "#/$defs/outcome"
+        },
+        "classification": {
+          "enum": [
+            "unchanged-pass",
+            "regression",
+            "fixed",
+            "unchanged-fail",
+            "indeterminate"
+          ]
+        }
+      }
+    },
+    "comparison": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema_version",
+        "suite",
+        "baseline",
+        "candidate",
+        "transitions",
+        "outcome"
+      ],
+      "properties": {
+        "schema_version": {
+          "const": "readme-evaluation-comparison.v1"
+        },
+        "suite": {
+          "$ref": "#/$defs/suiteIdentity"
+        },
+        "baseline": {
+          "$ref": "#/$defs/subject"
+        },
+        "candidate": {
+          "$ref": "#/$defs/subject"
+        },
+        "transitions": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/transition"
+          }
+        },
+        "outcome": {
+          "$ref": "#/$defs/outcome"
+        }
+      }
+    }
+  }
+}
