@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "readme-evaluation-suite.v1",
+  "suiteId": "readme-v1",
+  "identityInputs": [
+    ".node-version",
+    "package.json",
+    "package-lock.json",
+    "evaluation/suite.v1.json",
+    "evaluation/evidence.schema.json",
+    "evaluation/evaluate.mjs"
+  ],
+  "checks": [
+    {
+      "id": "gfm-render",
+      "required": true
+    },
+    {
+      "id": "relative-links",
+      "required": true
+    },
+    {
+      "id": "remote-links",
+      "required": true
+    }
+  ],
+  "linkPolicy": {
+    "ignorePatterns": [
+      {
+        "pattern": "^mailto:"
+      },
+      {
+        "pattern": "^https://github\\.com/camilojourney/(invoz|pilaster|smart-calendar|elucy|recovery-mac-system|cloud-deployment)/?$"
+      }
+    ],
+    "retryOn429": true,
+    "retryCount": 5,
+    "fallbackRetryDelay": "8s",
+    "timeout": "20s",
+    "aliveStatusCodes": [
+      200,
+      206,
+      999
+    ]
+  }
+}
