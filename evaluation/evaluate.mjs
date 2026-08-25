@@ -265,6 +265,11 @@ function fixtureObservation(value) {
   return { errorCode: "fixture-missing" };
 }
 
+function diagnosticUrl(url) {
+  const parsed = new URL(url);
+  return `${parsed.protocol}//${parsed.hostname}${parsed.pathname}`;
+}
+
 function isPrivateAddress(address) {
   const normalized = address.toLowerCase();
   if (isIP(normalized) === 4) {
@@ -367,6 +372,11 @@ async function observeRemoteLinks(urls, suite, networkMode, fixtures) {
     }
     const live = await runMarkdownLinkCheck(safeUrls, suite.linkPolicy);
     for (const [url, observation] of live) observations.set(url, observation);
+    for (const url of checkable) {
+      const observation = observations.get(url);
+      const classified = classifyHttpObservation(observation, suite.linkPolicy.aliveStatusCodes);
+      console.log(`Remote link: ${diagnosticUrl(url)} ${classified.outcome} (${classified.evidenceCode})`);
+    }
     return observations;
   }
   throw new UsageError(`Unsupported network mode: ${networkMode}`);
